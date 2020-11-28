@@ -1,0 +1,33 @@
+.right{
+    text-align: right;
+}
+input.btn{
+    color: #ff9933 !important;
+    border: 1px solid #ff9933 !important;
+    border-radius: 4px;
+    text-align: right;
+}
+input.btn:hover{
+    background-color: #ff9933 !important;
+    color: white !important;
+}
+.col-6 > img{
+    min-height: 620px;
+}
+.col-4{
+    align-self: center;
+}
+.form-group{
+    margin-top: 10px;
+}
+.input-group{
+    align-items: baseline;
+    color: #ff9933;
+    font-size: 20px;
+}
+.input-group > i {
+    margin-right: 4px;
+}
+body > .row{
+    margin: unset;
+}

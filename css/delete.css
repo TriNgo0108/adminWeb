@@ -1,0 +1,37 @@
+.container.bg-white{
+    box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+.pop_up{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+    background:#ff9933;
+    color:white;
+    top: 60%;
+    right: 10%;
+    left: 40%;
+    bottom: 10%;
+    box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.25);
+    text-align: center;
+    padding-top: 5%;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: 500ms all;
+}
+.pop_up.active{
+    z-index: 100;
+    opacity: 1;
+}
+.pop_up_button{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.pop_up_button > button{
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 30%;
+    border-radius: 10px;
+}

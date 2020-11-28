@@ -1,0 +1,61 @@
+.container h3, label{
+    color: #ff9933;
+}
+.container.col-9>form, .shadow{
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+    
+    margin-top: 20px;
+}
+.form-control:focus{
+    border-color: #ff9933 !important;
+    /* box-shadow: 0 0 0.2rem rgba(255,140,25,.25) !important; */
+    box-shadow: 0 0 0 0.2rem rgba(255,140,25,.25) !important;
+}
+#button{
+    color: #ff9933;
+    border: 1px solid #ff9933;
+    border-radius: 4px;
+    background-color: white;
+}
+#button:hover{
+    color: white;
+    background-color: #ff9933;
+    transition: 350ms all;
+}
+.last{
+    text-align: end;
+}
+.show{
+    display: block;
+}
+.popup{
+    position: absolute;
+    top: 80%;
+    bottom: 4%;
+    left: 100%;
+    right: 5%;
+    transition: .5s ease;
+    overflow: hidden;
+    width: 0px;
+}
+.popup.active{
+    width: 30%;
+    position: absolute;
+    background-color: #ff9933;
+    left: 70%;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    
+}
+.poup__content{
+    color: white;
+    display: none;
+    margin-top: 10%;
+}
+
+.active >.poup__content{
+    display: block;
+}
