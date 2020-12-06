@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <?php session_start();
-    if (!isset($_SESSION['id'])) {
-        header('Location: /adminWE');
-      }
+if (!isset($_SESSION['id'])) {
+    header('Location: /adminWE');
+}
+if (isset($type)) {
+    switch ($type) {
+        case (preg_match('/game/', $type) ? TRUE : FALSE):
+            $type_no = 1;
+            break;
+        case (preg_match('/figure/', $type) ? TRUE : FALSE):
+            $type_no = 2;
+            break;
+        case (preg_match('/manga/', $type) ? TRUE : FALSE):
+            $type_no = 3;
+            break;
+        default:
+            $type_no = 4;
+    }
+}
+include_once './Libs/core/edit.php';
+if (!is_numeric($numPage)) {
+    header("Location: /adminWE/404");
+}
+
 ?>
 <html lang="en">
 
@@ -33,36 +53,22 @@
             <?php include './views/header.php' ?>
             <h3> Chỉnh sủa sản phẩm </h3>
             <form action="/adminWE/search" id="search" method="POST">
-            <div class="form-group row shadow container">
-                <label for="name" class="col-sm-2 col-form-label">Tên sản phẩm</label>
-                <div class="col-sm-6">
-                    <input type="text" name="name" class="form-control" id="code" placeholder="Tên sản phẩm" required>
+                <div class="form-group row shadow container">
+                    <label for="name" class="col-sm-2 col-form-label">Tên sản phẩm</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="name" class="form-control" id="code" placeholder="Tên sản phẩm" required>
+                    </div>
+                    <button id="searchCode" class="btn col-sm-3">Tìm kiếm <i class="fas fa-search"></i></button>
                 </div>
-                <button id="searchCode" class="btn col-sm-3">Tìm kiếm <i class="fas fa-search"></i></button>
-            </div>
             </form>
             <div class="container">
                 <?php if (isset($type)) {
                     echo "<h4>$type</h4>";
-                    switch ($type) {
-                        case (preg_match('/game/', $type) ? TRUE : FALSE):
-                            $type_no = 1;
-                            break;
-                        case (preg_match('/figure/', $type) ? TRUE : FALSE):
-                            $type_no = 2;
-                            break;
-                        case (preg_match('/manga/', $type) ? TRUE : FALSE):
-                            $type_no = 3;
-                            break;
-                        default:
-                            $type_no = 4;
-                    }
                 }
 
                 ?>
                 <div class="row">
                     <?php
-                    include_once './Libs/core/edit.php';
                     foreach ($products as $product) {
                     ?>
                         <a class="col" href=<?php echo "/adminWE/product/" . $product->getPid() ?>>

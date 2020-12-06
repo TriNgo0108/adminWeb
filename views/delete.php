@@ -3,6 +3,25 @@
 if (!isset($_SESSION['id'])) {
     header('Location: /adminWE');
   }
+if (isset($type)) {
+    switch ($type) {
+        case (preg_match('/game/', $type) ? TRUE : FALSE):
+            $type_no = 1;
+            break;
+        case (preg_match('/figure/', $type) ? TRUE : FALSE):
+            $type_no = 2;
+            break;
+        case (preg_match('/manga/', $type) ? TRUE : FALSE):
+            $type_no = 3;
+            break;
+        default:
+            $type_no = 4;
+    }
+    include_once './Libs/core/edit.php';
+    if (!is_numeric($numPage)) {
+        header("Location: /adminWE/404");
+    }
+}
 ?>
 <html lang="en">
 
@@ -54,26 +73,8 @@ if (!isset($_SESSION['id'])) {
             </div>
             </form>
             <div class="container">
-                <?php if (isset($type)) {
-                    switch ($type) {
-                        case (preg_match('/game/', $type) ? TRUE : FALSE):
-                            $type_no = 1;
-                            break;
-                        case (preg_match('/figure/', $type) ? TRUE : FALSE):
-                            $type_no = 2;
-                            break;
-                        case (preg_match('/manga/', $type) ? TRUE : FALSE):
-                            $type_no = 3;
-                            break;
-                        default:
-                            $type_no = 4;
-                    }
-                }
-
-                ?>
                 <div class="row">
                     <?php
-                    include_once './Libs/core/edit.php';
                     $index = 0;
                     foreach ($products as $product) {
                         
