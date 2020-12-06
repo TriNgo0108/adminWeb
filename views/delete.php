@@ -51,7 +51,6 @@
             </form>
             <div class="container">
                 <?php if (isset($type)) {
-                    echo "<h4>$type</h4>";
                     switch ($type) {
                         case (preg_match('/game/', $type) ? TRUE : FALSE):
                             $type_no = 1;
@@ -95,10 +94,10 @@
                     ?>
                 </div>
                 <div class="row">
-                    <a href=<?php echo "/adminWE/search/$pagination[pagePre]" ?>>
+                    <a href=<?php echo "/adminWE/delete/$type/$pagination[pagePre]" ?>>
                         Trang trước
                     </a>
-                    <a href=<?php echo "/adminWE/search/$pagination[pageNext]" ?>>
+                    <a href=<?php echo "/adminWE/delete/$type/$pagination[pageNext]" ?>>
                         Trang sau
                     </a>
 
