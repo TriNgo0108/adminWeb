@@ -111,7 +111,7 @@ class Route
         }
 
         // nếu không khớp với bất kì route nào cả.
-        echo '404 - Not Found';
+        header("Location: /adminWE/404");
         return;
     }
     private function __call_action_route($action, $params)

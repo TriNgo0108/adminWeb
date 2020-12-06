@@ -36,5 +36,6 @@ $router->get("/product/{pid}","ProductController@edit");
 $router->post("/search","SearchController@search");
 $router->post("/search/{page}","SearchController@search");
 // $router->get("/test/{id}","EditController@test");
+$router->get("/404","errorController@error");
 $router->map($request_url,$method_url);
 ?>
