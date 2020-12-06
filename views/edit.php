@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php session_start();
-
+    if (!isset($_SESSION['id'])) {
+        header('Location: /adminWE');
+      }
 ?>
 <html lang="en">
 
