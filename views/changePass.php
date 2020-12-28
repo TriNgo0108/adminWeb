@@ -14,6 +14,7 @@ if (!isset($_SESSION['id'])) {
   <link rel="stylesheet" type="text/css" href=<?php echo Base_URL . "css/header.css" ?>>
   <link rel="stylesheet" type="text/css" href=<?php echo Base_URL . "css/navbar.css" ?>>
   <link rel="stylesheet" type="text/css" href=<?php echo Base_URL . "css/changePass.css" ?>>
+  <link rel="icon" type="image/png" href= <?php echo Base_URL."img/icon.png"?>>
   <style>
     body>.row {
       flex-wrap: unset;

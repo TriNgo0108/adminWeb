@@ -14,6 +14,7 @@ if (!isset($_SESSION['id'])) {
   <link rel="stylesheet" type="text/css" href="./css/header.css">
   <link rel="stylesheet" type="text/css" href="./css/navbar.css">
   <link rel="stylesheet" type="text/css" href="./css/addProduct.css">
+  <link rel="icon" type="image/png" href="./img/icon.png">
   <style>
     body>.row {
       flex-wrap: unset;

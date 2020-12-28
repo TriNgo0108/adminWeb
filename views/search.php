@@ -3,6 +3,7 @@
 if (!isset($_SESSION['id'])) {
     header('Location: /adminWE');
   }
+
 ?>
 <html lang="en">
 
@@ -15,6 +16,7 @@ if (!isset($_SESSION['id'])) {
     <link rel="stylesheet" type="text/css" href=<?php echo Base_URL . "css/navbar.css" ?>>
     <link rel="stylesheet" type="text/css" href=<?php echo Base_URL . "css/addProduct.css" ?>>
     <link rel="stylesheet" type="text/css" href=<?php echo Base_URL . "css/delete.css" ?>>
+    <link rel="icon" type="image/png" href= <?php echo Base_URL."img/icon.png"?>>
     <style>
         body>.row {
             flex-wrap: unset;
