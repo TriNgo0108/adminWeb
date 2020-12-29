@@ -77,7 +77,7 @@ if (!isset($_SESSION['id'])) {
                                             <a href=<?php echo "/adminWE/product/".$product->getPid(); ?>>Chỉnh sửa</a>
                                         </div>
                                         <div class="col bg-danger text-white delete">
-                                            <p>Xóa</p>
+                                            <p class="cursor">Xóa</p>
                                         </div>
                                     </div>
                                 </div>

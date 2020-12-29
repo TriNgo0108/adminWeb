@@ -25,12 +25,15 @@ if (!isset($_SESSION['id'])) {
       background-color: #f5f5f5;
     }
     .text-white{
-      width: 300px;
+      width: 500px;
       text-align: center;
       border-radius: 10px;
     }
     .text-white > p{
       font-size: x-large;
+    }
+    p > i.fas{
+      margin-right: 10px;
     }
   </style>
 </head>
@@ -42,14 +45,13 @@ if (!isset($_SESSION['id'])) {
       <?php include './views/header.php' ?>
       <?php
       if (isset($_COOKIE["uploadStatus"])) {
-        if ($_COOKIE["uploadStatus"] == 0) {
-
-          echo "<div class=\"bg-danger text-white\">";
-          echo "<p>Có lỗi khi tải lên, vui lòng thử !</p>";
-          echo "</div>";
-        } else {
+        if ($_COOKIE["uploadStatus"] == "1") {
           echo "<div class=\"bg-success text-white\">";
           echo "<p><i class=\"fas fa-check-circle\"></i>Tải lên thành công</p>";
+          echo "</div>";
+        } else {
+          echo "<div class=\"bg-danger text-white\">";
+          echo "<p><i class=\"fas fa-times\"></i>Có lỗi khi tải lên, vui lòng thử !</p>";
           echo "</div>";
         }
       }

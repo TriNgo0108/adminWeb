@@ -157,3 +157,6 @@ button.btn:hover, button.btn:focus, #searchCode:hover, #searchCode:focus{
 .text-white > a{
     color: white !important;
 }
+.cursor{
+    cursor: pointer;
+}
