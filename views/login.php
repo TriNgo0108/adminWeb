@@ -2,6 +2,9 @@
 <html lang="en">
 <?php
     session_start();
+    if (isset($_SESSION)){
+        header("Location: /adminWE/dashboard");
+    }
  ?>
 <head>
     <meta charset="UTF-8">
